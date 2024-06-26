@@ -1,0 +1,123 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background-color: #11101d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 20px;
+  padding-left:200px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo-details {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+}
+
+.navbar .logo-details .logo_name {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.navbar #btn {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  display: none;
+}
+
+.navbar .nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  transition: all 0.5s ease;
+}
+
+.navbar .nav-list li {
+  margin: 0 20px; /* Add margin on both sides for spacing */
+  position: relative;
+}
+
+.navbar .nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-list li a:hover {
+  color: #fbfbf7;
+}
+
+.navbar .nav-list li i {
+  margin-right: 8px;
+}
+
+.navbar .nav-list .links_name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.navbar .nav-list .tooltip {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #11101d;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.navbar .nav-list li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: -30px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar .logo-details {
+    margin-bottom: 10px;
+  }
+
+  .navbar #btn {
+    display: block;
+  }
+
+  .navbar .nav-list {
+    flex-direction: column;
+    width: 100%;
+    display: ${isOpen ? 'flex' : 'none'};
+  }
+
+  .navbar .nav-list li {
+    margin: 10px 0;
+  }
+}

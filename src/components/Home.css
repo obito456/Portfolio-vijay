@@ -1,0 +1,41 @@
+/* .container {
+    background-image: url("../Images/abs.png");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    height: 100vh;
+}  */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Adjust as needed */
+  }
+  
+  .image {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .h2 {
+    margin-top: 10px; 
+    margin-left:270px;
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8),
+                 -1px -1px 3px rgba(0, 0, 0, 0.6);
+  }
+  .p1{
+    padding-top:10px;
+  }
+
+  
